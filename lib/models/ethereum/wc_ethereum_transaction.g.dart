@@ -16,6 +16,9 @@ WCEthereumTransaction _$WCEthereumTransactionFromJson(
     gas: json['gas'] as String?,
     gasLimit: json['gasLimit'] as String?,
     value: json['value'] as String?,
+    maxFeePerGas: json['maxFeePerGas'] as String?,
+    maxPriorityFeePerGas: json['maxPriorityFeePerGas'] as String?,
+    type: json['type'] as int?,
     data: json['data'] as String,
   );
 }
@@ -30,5 +33,8 @@ Map<String, dynamic> _$WCEthereumTransactionToJson(
       'gas': instance.gas,
       'gasLimit': instance.gasLimit,
       'value': instance.value,
+      'maxFeePerGas': instance.maxFeePerGas,
+      'maxPriorityFeePerGas': instance.maxPriorityFeePerGas,
+      'type': instance.type,
       'data': instance.data,
     };
